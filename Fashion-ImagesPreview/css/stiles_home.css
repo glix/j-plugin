@@ -1,0 +1,6 @@
+#conttitle{font-family:'Open Sans',sans-serif;font-weight:300;color:#ccc;text-align:right;text-transform:uppercase;font-size:40px;margin:30px auto;width:800px}
+#conttitle strong{color:orange;font-size:20px;font-weight:400;display:block;margin:0}
+#cont_hom{display:block;margin:0 auto;width:960px;text-align:center}
+#cont_hom .div_ima{display:inline-block;vertical-align:top;* display:inline;zoom:1;height:120px}
+.jq_Impreview{display:inline-block;vertical-align:top;* display:inline;zoom:1;border:3px solid #ccc;margin:5px}
+.jq_Impreview:hover{border-color:#f1f1f1}

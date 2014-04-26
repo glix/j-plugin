@@ -1,0 +1,69 @@
+.jq_Impreview {
+cursor: pointer
+}
+.jq_Impreview img {
+display: block;
+margin: 0;
+max-width: 100%
+}
+.loading {
+background-image: url("../img/loading.gif");
+background-position: center center;
+background-repeat: no-repeat
+}
+#jQimagPreview {
+display: none;
+margin: 0;
+position: absolute;
+top: 0;
+width: 100%;
+height: 100%;
+background-image: url("../img/repead_jque_img.png");
+background-repeat: repeat;
+z-index: 999999999
+}
+#jQimagPreview_cont {
+display: block;
+margin: 0 auto;
+width: 60%;
+background-color: white;
+border: 1px solid #ccc;
+top: 15%;
+position: relative;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+-moz-border-radius: 5px;
+-wap-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px
+}
+#jQimagPreview_cont .con_in {
+display: block;
+margin: 0 auto;
+min-height: 300px
+}
+#jQimagPreview_cont .jQimagPreview_img_i {
+display: block;
+height: auto;
+margin: -32px auto 0;
+position: relative;
+width: 100%;
+border-radius: 4px;
+-webkit-border-radius: 4px;
+-khtml-border-radius: 4px;
+-moz-border-radius: 4px;
+-wap-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px
+}
+#jQimagPreview_cont .closeWin {
+cursor: pointer;
+left: -29px;
+position: relative;
+top: -23px
+}
+#jQimagPreview_cont .closeWin img {
+width: 27px;
+height: auto
+}
