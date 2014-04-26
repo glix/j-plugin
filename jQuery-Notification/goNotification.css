@@ -1,0 +1,153 @@
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+.js-go-notification{
+    position: fixed;
+    z-index: 980;
+    width: 300px;
+    font-family: sans-serif;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
+    transform: translateZ(0px);
+}
+
+.js-go-notification .notification{
+    position: relative;
+    display: none;
+}
+
+.js-go-notification .notification + .notification{
+    margin-top: 10px;
+}
+
+.js-go-notification .notification.stripes{
+    background-size: 80px 80px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+                        transparent 75%, transparent);
+}
+
+.js-go-notification .notification.shadow{
+    box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.7);
+}
+
+.js-go-notification .notification section{
+    padding: 12px 30px 10px 55px;
+    color: rgba(255,255,255,.8);
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.js-go-notification .notification section i{
+    float: right;
+    color: rgba(255,255,255,0.4);
+    top: 11px;
+    right: 10px;
+    position: absolute;
+}
+
+.js-go-notification .notification section i:hover{
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    cursor: hand;
+}
+
+.js-go-notification.left{
+    left: 10px;
+}
+
+.js-go-notification.right{
+    right: 10px;
+}
+
+.js-go-notification.center{
+    left: 34%;
+    width: 500px;
+}
+
+.js-go-notification.bottom{
+    bottom: 10px;
+}
+
+.js-go-notification.top{
+    top: 10px;
+}
+
+.js-go-notification .notification:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 44px;
+    padding: 14px 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.1);
+}
+
+.js-go-notification .notification:after{
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 15px;
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    color: rgba(255,255,255,0.6);
+}
+
+.js-go-notification .notification.loading{
+    background-color: #555;
+}
+
+.js-go-notification .notification.loading:after{
+    content: "\f013";
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+
+.js-go-notification .notification.success{
+    background-color: #9fbb58;
+}
+
+.js-go-notification .notification.success:after{
+    content: "\f058";
+}
+
+.js-go-notification .notification.warning{
+    background-color: #E25440;
+}
+
+.js-go-notification .notification.warning:after{
+    content: "\f071";
+}
+
+.js-go-notification .notification.info{
+    background-color: #5BA4E5;
+}
+
+.js-go-notification .notification.info:after{
+    content: "\f05a";
+}
+
+.js-go-notification .notification.error{
+    background-color: #9e1c30;
+}
+
+.js-go-notification .notification.error:after{
+    content: "\f057";
+}
+
+.js-go-notification .notification.question{
+    background-color: #9e4d61;
+}
+
+.js-go-notification .notification.question:after{
+    content: "\f059";
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
