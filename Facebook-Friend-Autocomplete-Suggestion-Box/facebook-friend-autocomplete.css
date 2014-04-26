@@ -1,0 +1,47 @@
+/*
+ *
+ * Facebook Friend Autocomplete JQuery Plugin v0.0
+ * https://agelber.github.com/facebook-friend-autocomplete
+ *
+ * Copyright 2014 Assaf Gelber
+ * Released under the MIT license
+ *
+ */
+
+.fbac-suggestion-list {
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  font-color: #333;
+  text-align: left;
+  border: solid;
+  border-width: 1px 1px 2px;
+  border-color: #333 #333 #293e6a;
+  padding: 2px 0px;
+  z-index: 1000
+}
+
+.fbac-suggestion-list:empty {
+  border: none;
+}
+
+.fbac-suggestion {
+  padding: 2px 5px 2px 5px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.fbac-suggestion.fbac-selected {
+  background-color: #6d84b4;
+  border-color: #3b5998;
+  color: #fff;
+}
+
+.fbac-suggestion-avatar {
+  vertical-align: top;
+}
+
+.fbac-suggestion-name {
+  margin-left: 10px;
+}

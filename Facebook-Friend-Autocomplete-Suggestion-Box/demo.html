@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Facebook Autocomplete Demo</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="facebook-friend-autocomplete.js"></script>
+    <link rel="stylesheet" href="facebook-friend-autocomplete.css">
+    <style>
+      body {
+        font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+        color: #333;
+        text-align: center;
+      }
+
+      button {
+        border: 1px solid #333;
+        background: #6d84b4;
+        color: #fff;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .demo {
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+      }
+
+      input {
+        width: 250px;
+        border: 1px solid #333;
+        outline: none;
+        padding: 2px 5px;
+      }
+
+      .friend {
+        margin: 0 auto;
+      }
+
+      .friend h3 {
+        display: inline;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: '216297128537775'
+      });
+
+      $('#fb-login').on('click', function() {
+        FB.login();
+      });
+
+      FB.Event.subscribe('auth.authResponseChange', function(response) {
+        if (response.status === 'connected') {
+          $('#login').remove();
+
+          // Default
+          $('#fb-input1').facebookAutocomplete(function(friend) { 
+            createFriendElement(friend).insertBefore($(this));
+          });
+
+          // No Avatars
+          $('#fb-input2').facebookAutocomplete({
+              showAvatars: false,
+              onpick: function(friend) { 
+                createFriendElement(friend).insertBefore($(this));
+              }
+          });
+
+          // Big Avatars
+          $('#fb-input3').facebookAutocomplete({
+              avatarSize: 64,
+              onpick: function(friend) { 
+                createFriendElement(friend).insertBefore($(this));
+              }
+          });
+
+          // More Suggestions
+          $('#fb-input4').facebookAutocomplete({
+              maxSuggestions: 12,
+              onpick: function(friend) { 
+                createFriendElement(friend).insertBefore($(this));
+              }
+          });
+
+        } else {
+          $('#demos').remove();
+        }
+      });
+    };
+
+    function createFriendElement(friend) {
+      var $img = $('<img>').attr('src', friend.picture),
+          $name = $('<h3>').text(friend.name),
+          $friend = $('<div>').addClass('friend').append($img, $name);
+      return $friend;
+    }
+
+    // Load the SDK asynchronously
+    (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+    }(document));
+  </script>
+
+  <h1>Demo Page For The Facebook Friend Autocomplete Plugin</h1>
+
+  <div id="demos">
+    <div class="demo">
+      <h2>Demo #1: Default</h2>
+      <input type="text" id="fb-input1" />
+    </div>
+    <div class="demo">
+      <h2>Demo #2: No Avatars</h2>
+      <input type="text" id="fb-input2" />
+    </div>
+    <div class="demo">
+      <h2>Demo #3: Big Avatars</h2>
+      <input type="text" id="fb-input3" />
+    </div>
+    <div class="demo">
+      <h2>Demo #4: More Suggestions</h2>
+      <input type="text" id="fb-input4" />
+    </div>
+  </div>
+  <div id="login">
+    <h2>Login in with Facebook to view the demo</h2>
+    <p>Don't worry, no data is saved anywhere</p>
+    <button id="fb-login">Login</button>
+  </div>
+  </body>
+</html>
