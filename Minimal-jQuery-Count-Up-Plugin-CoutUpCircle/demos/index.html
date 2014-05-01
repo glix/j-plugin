@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>CountUpCircle Demo</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="../jquery.countupcircle.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#count-box').CountUpCircle({
+                    duration: 2000,
+                    opacity_anim: true
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+           <div id="count-box">19</div> 
+        </div>
+    </body>
+</html>
