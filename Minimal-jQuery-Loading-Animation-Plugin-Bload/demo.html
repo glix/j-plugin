@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Bload Plugin Demos</title>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<!-- Bootstrap -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/redmond/jquery-ui.min.css" />
+</head>
+<body>
+<div class="container">
+<div class="jumbotron">
+<h2 class="text-center">jQuery Bload Plugin Demos</h2>
+<div style="width: 150px; height: 150px; background-color: #CCC; float: left; border-radius:2px" class="text-center" id="bloadify"> <a href="#" class="btn btn-primary bload" style="margin-top: 65px;" data-bloadify="bloadify">Bload</a> </div>
+<div style="width: 150px; height: 150px; background-color: #CCC; float: left; margin-left: 5px; border-radius:2px" class="text-center" id="bloadify2"> <a href="#" class="btn btn-primary bload" style="margin-top: 65px;" data-bloadify="bloadify2">Bload</a> </div>
+<div style="width: 150px; height: 150px; background-color: #CCC; float: left; margin-left: 5px; border-radius:2px" class="text-center" id="bloadify3"> <a href="#" class="btn btn-primary" id="bload3" style="margin-top: 65px;">Bload</a> </div>
+<div style="width: 200px; height: 150px; background-color: #CCC; float: left; margin-left: 5px; border-radius:2px" class="text-center" id="bloadify4"> <a href="#" class="btn btn-primary" id="bload4" style="margin-top: 65px;">Bload</a> </div>
+<div class="clearfix"></div>
+</div>
+</div>
+<script type="text/javascript" src="bload/bload.js"></script>
+<link type="text/css" rel="stylesheet" href="bload/bload.css" />
+<script>
+			$(document).ready(function(){
+				$('.bload').click(function(e){
+					e.preventDefault();
+					var $toBload = $('#' + $(this).data('bloadify'))
+					$toBload.bload(function(bload){
+						setTimeout(function(){
+							bload.hide();
+						},3000);
+
+					});
+				});
+				
+				$('#bload3').click(function(e){
+					e.preventDefault();
+					$('#bloadify3').bload({
+						fadeInSpeed		: 600,
+						maskOpacity		: .6,
+						maskWidthHeight	: 96,
+						overlay : {
+							show		: true
+						}
+					},
+					function(bload){
+						setTimeout(function(){
+							bload.hide();
+						},3000);
+
+					});
+				});
+				
+				$('#bload4').click(function(e){
+					e.preventDefault();
+					$('#bloadify4').bload({
+						imagePath		: 'images/hloader.gif',
+						imageDims		: {w:128,h:15},
+						imagePadding	: 4,
+						maskOpacity		: .5,
+						fullScreen		: true,
+						overlay : {
+							show		: true
+						}
+					},
+					function(bload){
+						setTimeout(function(){
+							bload.hide();
+						},3000);
+
+					});
+				});
+			});
+		</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
