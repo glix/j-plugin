@@ -1,0 +1,312 @@
+/**
+ * jquery-hover-dropdown-box - Stylesheet
+ * You can convert .less file to .css file, by using "lessc" (http://lesscss.org/).
+ **/
+
+// --------------------
+
+@link_color: #71a7c2;
+
+// Box
+@box_color_background: #fefefe;
+
+// Header
+@header_color_background: #767676; // WCAG 2.0 AA
+@header_color_font: #ffffff;
+
+// List
+@list_item_color_background: #ffffff;
+@list_item_color_font: #101010;
+@list_item_checkbox_color_border: #e0e0e0;
+@list_item_checkbox_color_checkmark: #303030;
+
+// Footer
+@footer_color_border: #eeeeee;
+
+// Only Webkit
+@scroll_bar_color_background: #fafafa;
+@scroll_bar_color_thumb: #e0e0e0;
+
+// --------------------
+
+ .hover_dropdown_box {
+ 	position:	absolute;
+ 	display:		block;
+ 	height: 		220px;
+ 	width:		200px;
+ 	background-color: @box_color_background;
+ 	border-top:		1px solid #e0e0e0;
+ 	border-bottom:	1px solid #c8c8c8;
+ 	border-left:		1px solid #e0e0e0;
+ 	border-right:	1px solid #e0e0e0;
+ 	font-size:		13px;
+ 	font-weight: 	normal;
+ 	.box_shadow(0px, 1px, 10px, 1px, rgba(50,50,50,0.1));
+ 	.border_radius(2px);
+
+	// Header
+	h3 {
+		display: 			table-cell;
+		width:				inherit;
+		padding:				4px 0 4px 0;
+		margin:				0 0 0 0;
+		background-color:	@header_color_background;
+		color:				@header_color_font;
+		text-align:			center;
+		vertical-align: 		middle;
+		font-weight:			bold;
+		font-size:			13px;
+
+		.border_top_left_radius(2px);
+		.border_top_right_radius(2px);
+	}
+
+	// List
+	ul {
+		height:		180px;
+		margin:		0 0 0 0;
+		padding:		0 0 0 0;
+		overflow:	auto;
+
+		li:after {
+			content: "";
+			clear: both;
+		}
+	}
+
+	// List - scrollbar
+	ul::-webkit-scrollbar {
+		overflow: hidden;
+		width: 6px;
+		background: @scroll_bar_color_background;
+	}
+
+	ul::-webkit-scrollbar:horizontal {
+		height: 1px;
+	}
+
+	ul::-webkit-scrollbar-button {
+		display: none;
+	}
+
+	ul::-webkit-scrollbar-piece {
+		background: #eee;
+	}
+
+	ul::-webkit-scrollbar-piece:start {
+		background: #eee;
+	}
+
+	ul::-webkit-scrollbar-thumb {
+		background: @scroll_bar_color_thumb;
+		.border_radius(1px);
+	}
+
+	ul::-webkit-scrollbar-corner {
+		background: #333;
+	}
+
+	// List - Item
+	.hover_dropdown_box_item {
+		position:	relative;
+		width:		100%;
+		height:		30px;
+		margin:		5px 0px 5px 0px;
+		overflow:	hidden;
+		color:		@list_item_color_font;
+		cursor:		pointer;
+		list-style-type:		none;
+		background-color:	@list_item_color_background;
+
+		.hover_dropdown_box_item_color_tag {
+			display:		block;
+			position:	relative;
+			float:		left;
+			height:		inherit;
+			width:		5%;
+			top:			0px;
+			left:		0px;
+			.user_select(none);
+		}
+
+		.hover_dropdown_box_item_label {
+			display:			table-cell;
+			position:		absolute;
+			height:			1em;
+			width:			100%;
+			margin-left:		15%;
+			vertical-align:	middle;
+			line-height:		2.5em;
+			.user_select(none);
+		}
+
+		.hover_dropdown_box_item_checkbox {
+			display:			table-cell;
+			position:		absolute;
+			height:			24px;
+			width:			24px;
+			top:				1px;
+			right:			5px;
+			vertical-align:	middle;
+			border:			2px solid @list_item_checkbox_color_border;
+			border-radius: 	2px;
+			.user_select(none);
+		}
+
+		.checkbox_checked:after {
+			/*
+				Solution:
+				http://webitect.net/design/webdesign/creating-fancy-bullet-points-with-pure-css3/
+				Thankyou.
+			*/
+			display:		table-cell;
+			position:	absolute;
+			left:		10px;
+			height:		18px;
+
+			content:		"\00a0";
+			border:		solid @list_item_checkbox_color_checkmark;
+			border-width: 0 2px 2px 0;
+
+			vertical-align: middle;
+
+			.transform_rotate(45deg)
+		}
+
+		.hover_dropdown_box_item_textbox {
+			position:		absolute;
+			display:			table-cell;
+			height:			auto;
+			width:			60%;
+			margin-left: 	20%;
+			top:				0px;
+			bottom:			0px;
+			vertical-align:	middle;
+		}
+
+		.hover_dropdown_box_item_input_action {
+			display:			table-cell;
+			position:		absolute;
+			width:			1em;
+			top: 			0px;
+			bottom:			0px;
+			vertical-align: middle;
+			line-height:		2.5em;
+			color:			@link_color;
+			.user_select(none);
+		}
+
+		.hover_dropdown_box_item_input_action.input_action_left {
+			margin-left:		0px;
+			left:			10%;
+		}
+
+		.hover_dropdown_box_item_input_action.input_action_right {
+			right:			5%;
+			margin-left:		5%;
+		}
+	}
+
+	.hover_dropdown_box_item:hover {
+		.box_shadow(0px, 0px, 0px, 1px, rgba(150,150,150, 0.2));
+		transition: all 0.1s linear;
+	}
+
+	// Footer
+	.hover_dropdown_box_item.hover_dropdown_box_footer {
+		display: block;
+		position: absolute;
+		color:	@link_color;
+		bottom: -1px;
+		padding-top:	3px;
+		padding-bottom: 1px;
+		border-top:	1px solid @footer_color_border;
+
+		.hover_dropdown_box_item_textbox {
+			margin-top: 3px;
+		}
+
+		.hover_dropdown_box_item_input_action {
+			top: 2px;
+		}
+	}
+}
+
+.hover_dropdown_box_with_footer > ul {
+	height:	150px !important;
+}
+
+.hover_dropdown_box.hover_dropdown_box_inline {
+	position:	relative !important;
+}
+
+.hover_dropdown_box.hover_dropdown_box_hover {
+	position:	absolute !important;
+	transition: opacity 0.3s linear;
+	z-index:		10000;
+	.opacity(1.0);
+}
+
+.hover_dropdown_box.hover_dropdown_box_hide {
+	.opacity(0.0) !important;
+}
+
+.box_shadow (@h_offset, @v_offset, @blur, @exp, @color){
+	box-shadow: @h_offset @v_offset @blur @exp @color;
+	-moz-box-shadow: @h_offset @v_offset @blur @exp @color;
+	-webkit-box-shadow: @h_offset @v_offset @blur @exp @color;
+	-o-box-shadow: @h_offset @v_offset @blur @exp @color;
+	-ms-box-shadow: @h_offset @v_offset @blur @exp @color;
+}
+
+.box_shadow_inset (@h_offset, @v_offset, @blur, @exp, @color){
+	box-shadow: @h_offset @v_offset @blur @exp @color inset;
+	-moz-box-shadow: @h_offset @v_offset @blur @exp @color inset;
+	-webkit-box-shadow: @h_offset @v_offset @blur @exp @color inset;
+	-o-box-shadow: @h_offset @v_offset @blur @exp @color inset;
+	-ms-box-shadow: @h_offset @v_offset @blur @exp @color inset;
+}
+
+.border_radius (@rad:0px){
+	border-radius: 				@rad;
+	-webkit-border-radius: 	@rad;
+	-moz-border-radius: 		@rad;
+	-o-border-radius: 		@rad;
+	-ms-border-radius: 		@rad;
+}
+
+.border_top_left_radius (@rad:0px){
+	border-top-left-radius: @rad;
+	-webkit-border-top-left-radius: 	@rad;
+	-moz-border-radius-topleft: 		@rad;
+}
+
+.border_top_right_radius (@rad:0px){
+	border-top-right-radius: @rad;
+	-webkit-border-top-right-radius: 	@rad;
+	-moz-border-radius-topright: 		@rad;
+}
+
+.user_select(@value){
+	user-select: @value;
+	-webkit-user-select: @value;
+	-khtml-user-select: @value;
+	-moz-user-select: @value;
+	-ms-user-select: @value;
+}
+
+.transform_rotate(@d){
+	transform: rotate(@d);
+	-webkit-transform: rotate(@d);
+	-moz-transform: rotate(@d);
+	-o-transform: rotate(@d);
+	-ms-transform: rotate(@d);
+}
+
+.opacity(@val){
+	opacity:	 @val;
+		-webkit-opacity: @val;
+		-moz-opacity: @val;
+		-o-opacity: @val;
+		-ms-opacity: @val;
+}
