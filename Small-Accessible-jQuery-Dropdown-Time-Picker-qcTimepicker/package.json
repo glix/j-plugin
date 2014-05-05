@@ -1,0 +1,26 @@
+{
+  "name": "qcTimepicker",
+  "description": "A lightweight, accessible, highly customizable dropdown time picker jQuery plugin.",
+  "version": "1.0.0",
+  "private": false,
+  "author": "Vincent Diep",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/RinkAttendant6/qcTimepicker.git"
+  },
+  "license": "MPL-2.0",
+  "dependencies": {
+    "jquery": ">=1.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-qunit": "*",
+    "matchdep": "*"
+  },
+  "scripts": {
+    "test": "grunt travis --verbose"
+  }
+}
