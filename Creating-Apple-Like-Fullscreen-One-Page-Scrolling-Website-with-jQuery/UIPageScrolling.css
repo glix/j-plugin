@@ -1,0 +1,25 @@
+.ui-page-scrolling-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ui-page-scrolling-section_active {
+
+}
+
+.ui-page-scrolling-control {
+    cursor: pointer;
+}
+
+.ui-page-scrolling-control_active {
+/* стили для данного класса необходимо определить, для отображения активной страницы (в указателях) */
+}
+
+.ui-page-scrolling-main {
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style : preserve-3d;
+}

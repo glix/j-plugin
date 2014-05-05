@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8">
+    <title>On Page Scroll Demo</title>
+    <script type="text/javascript" src="http://yandex.st/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../UIPageScrolling.js"></script>
+    <script>
+        $(function() {
+
+            $(".main").UIPageScrolling({
+                isVertical : false,
+                sectionsControl:".page-control__item",
+                captureTouch: true
+            });
+
+        })
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="../UIPageScrolling.css" type="text/css">
+
+</head>
+<body class="page">
+<a href="https://github.com/xnimorz/UIPageScrolling" class="menu link">
+    <div class="menu-line">
+        <div class="menu__item">UIPageScrolling</div><div class="menu__item ">Fork me on GitHub</div>
+    </div>
+</a>
+<ul class="page-control">
+    <li class="page-control__item"></li>
+    <li class="page-control__item"></li>
+    <li class="page-control__item"></li>
+</ul>
+<div class="main">
+
+    <section class="item standart">
+        <div class="item__description text-block">
+            <div class="text-block__header text-block__line">UI Page Scrolling</div>
+            <div class="text-block__line">Плагин позволяет создавать веб-странницы в виде слайдов</div>
+            <div class="text-block__line">Скроллинг можно осуществлять как сверху вниз, так и слева направо</div>
+            <a href="UIPageScrolling-Vertical-DEMO.html" class="text-block__line">Пример вертикального скроллинга</a>
+            <a href="https://github.com/xnimorz/UIPageScrolling" class="text-block__line button link">Перейти на GitHub</a>
+        </div>
+
+    </section>
+
+
+
+    <section class="item red">
+        <div class="item__description text-block">
+            <div class="text-block__header">Начинаем работу</div>
+            <div class="text-block__line">Для работы с плагином, необходимо установить HTML разметку:</div>
+            <div class="text-block__line_code">&lt;div class=".main"&gt;</div>
+            <div class="text-block__line_code">&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;</div>
+            <div class="text-block__line_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/some code/</div>
+            <div class="text-block__line_code">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;</div>
+            <div class="text-block__line_code">&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;</div>
+            <div class="text-block__line_code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/some code/</div>
+            <div class="text-block__line_code">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;</div>
+            <div class="text-block__line_code">&lt;/div&gt;</div>
+            <div class="text-block__line">Затем, с помощью вызова фунции </div>
+            <div class="text-block__line_code">$(".main").UIPageScrolling();</div>
+            <div class="text-block__line">Будет получена веб-страница с 2 слайдами. Контент содержится в section</div>
+            <p></p>
+            <div class="text-block__line">При необходимости, можно создать элементы, которые будут использоваться в роли переключателей слайдов. (Как на этой странице - справа) Для этого необходимо создать необходимое количество элементов (например, задав им класс page-control) и вызвать функцию, задав селектор на page-control: </div>
+            <div class="text-block__line_code">$(".main").UIPageScrolling({sectionsControl:".page-control"});</div>
+            <div class="text-block__line">Для отображения активной страницы, задайте стили классу: ui-page-scrolling-control_active</div>
+
+        </div>
+    </section>
+
+    <section class="item green">
+        <div class="item__description text-block">
+            <div class="text-block__header">Поддерживаемые настройки</div>
+            <div class="text-block__line">Функция UIPageScrolling в качестве параметров принимает JSON объект</div>
+            <div class="text-block__line">Возможные параметры:</div>
+            <div class="text-block__line_code">{String} sections : пользовательский селектор (по умолчанию section)</div>
+            <div class="text-block__line_code">{String} easing : transition-timing-function</div>
+            <div class="text-block__line_code">{Number} time : время анимации</div>
+            <div class="text-block__line_code">{Function} beforeMoveFunc : функция, исполняющаяся перед анимацией</div>
+            <div class="text-block__line_code">{Function} afterMoveFunc : функция, исполняющаяся после анимации</div>
+            <div class="text-block__line_code">{Boolean} isCyclic : цикличная прокрутка</div>
+            <div class="text-block__line_code">{Boolean} isVertical : вертикальная\горизонтальная прокрутка</div>
+            <div class="text-block__line_code">{String} sectionsControl : селектор на выбор слайда</div>
+            <div class="text-block__line_code">{Boolean} captureKeyboard : захват клавиатуры (управления курсором + Page Up\Down)</div>
+            <div class="text-block__line_code">{Boolean} captureTouch : захват скроллинга пальцем (мышью) по умолчанию - отключено (false)</div>
+            <a href="UIPageScrolling-Vertical-DEMO.html" class="text-block__line">Пример вертикального скроллинга</a>
+            <a href="https://github.com/xnimorz/UIPageScrolling" class="text-block__line button link">Перейти на GitHub</a>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>
