@@ -1,0 +1,21 @@
+
+In This Folder
+
+jQuery Libraries
+
+ - jquery-1.10.2.min
+ - jquery-ui-1.10.3.custom.min
+
+Un-minified portBox and slimScroll
+
+ -portBox
+ -jquery.slimscroll
+
+Minified portBox and slimScroll
+
+ -portBox.min
+ -jquery.slimscroll.min
+
+Combined minified portBox and slimScroll
+
+ - portBox.slimscroll.min

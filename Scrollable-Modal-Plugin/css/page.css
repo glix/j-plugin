@@ -1,0 +1,157 @@
+
+/*  install page css  */
+			
+body{
+	background:#dedede url(../img/escheresque.png);
+	font-family: 'Source Sans Pro', sans-serif;	
+}
+
+.content{
+	background:#fff;
+	width:800px;
+	min-width:250px;
+	margin:0 auto;
+	padding:30px 30px 50px 30px;
+	color:#303030;
+	font-weight:300;
+	border-radius:5px;
+}
+
+footer{
+	width:800px;
+	text-align:center;
+	margin:0 auto;
+}
+
+h1{
+	letter-spacing: -0.025em;
+	margin:0 0 0 0;
+	font-size:5em;	
+	line-height:48px;
+	font-weight:300;
+}
+
+h3{
+	color:#888;
+	font-weight:300;
+	font-size:2em;
+	letter-spacing: -0.015em;	
+}
+
+h4{
+	font-size:24px;
+	margin: 30px 0 10px 0;
+	letter-spacing: -0.015em;	
+}
+
+h5{
+	font-size:20px;
+	margin-bottom:5px;	
+}
+
+p{
+	font-size:1.2em;
+}
+
+#install{
+	width:680px;
+	margin-left:30px;	
+}
+
+a {
+	color: #888888;
+	-moz-transition: color .2s ease-in-out;
+	-webkit-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+a:hover {
+	color: #99cd4e !important;
+}
+
+.button:hover {
+	background-color: #7DB4B5;
+	color: #fff !important;
+}
+
+.button {
+	padding: 10px 20px;
+	margin-right: 20px;
+	background: #99cd4e;
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	border-radius: 5px;
+	text-shadow: -1px -1px 0.5px rgba(0,0,0,0.5);
+	-moz-transition: background-color .2s ease-in-out;
+	-webkit-transition: background-color .2s ease-in-out;
+	-o-transition: background-color .2s ease-in-out;
+	-ms-transition: background-color .2s ease-in-out;
+	transition: background-color .2s ease-in-out;
+}
+
+#install p{
+	margin-bottom:16px;
+	font-size:1.2em;
+}
+
+#install ul{
+	width:400px;
+	margin:5px 0 40px 0;	
+}
+
+#install ul li{
+	margin:10px 0;	
+	float:left;	
+	margin-right:10px;
+	list-style-position:inside;
+	width:100px;
+}
+
+.button{
+	padding:10px 20px;
+	margin-right:20px;	
+}
+
+hr{
+	color:#888;
+	opacity:0.4;
+	margin:40px 0;	
+}
+
+#links{
+	float:right;
+	color:#303030;
+	font-weight:600;
+	list-style:none;
+}
+
+#links li{
+	float:left;
+	margin-left:20px;	
+}
+
+.like-btns{
+	width:50px;
+	padding:5px;
+	background:#ffffff;
+	position:fixed;
+	margin-left:830px;
+	text-align:center;
+	border-radius:0 3px 3px 0;
+}
+
+#copyright, #copyright a {
+	color: #666;
+}
+
+#copyright {
+	font-size: 1em;
+}
