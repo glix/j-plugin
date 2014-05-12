@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <!-- @reload -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>squishy.js Tests</title>
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../dist/squishy.js"></script>
+
+        <style>
+            h1, p {
+                border: 2px solid black;
+            }
+
+            .squishy {
+                border-color: red;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="squishy">Squish this!</h1>
+        <h1>Squish this!</h1>
+        <div>
+            <p class="squishy">
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+            </p>
+        </div>
+
+        <script>
+            // Standard style
+            // var squishy = $(".squishy").squishy();
+
+            // Manual resizes
+            // var squishy = $(".squishy").squishy({runAutomatically: false});
+
+            // Equalize sizes
+            // var squishy = $(".squishy").squishy({equalizeSizes: true});
+
+            // Callback
+            var squishy = $(".squishy").squishy({ callback: function(args) { console.log(args); } });
+
+            // Conditions
+            // var mql = window.matchMedia("(max-width: 50em)");
+            // var squishy = $(".squishy").squishy({condition: function() { return mql.matches; }});
+        </script>
+    </body>
+</html>
