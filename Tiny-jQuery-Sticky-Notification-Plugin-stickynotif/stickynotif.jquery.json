@@ -1,0 +1,42 @@
+{
+    "name": "stickynotif",
+    "title": "jQuery StickyNotif",
+    "description": "A jQuery plugin to display info, success, warning, error, or general message in a clean and consistent sticky notification. This plugin is based on Sticky: A super simple notification system for jQuery, by Daniel Raftery.",
+    "keywords": [
+        "sticky",
+        "notification",
+        "popup",
+        "message",
+        "info",
+        "success",
+        "warning",
+        "error"
+    ],
+    "version": "0.0.1",
+    "author": {
+        "name": "Glenn Dwiyatcita",
+        "email": "glenn.dwiyatcita@rwth-aachen.de",
+        "url": "http://tiny.cc/dwiyatci"
+    },
+    "maintainers": [
+        {
+            "name": "Glenn Dwiyatcita",
+            "email": "glenn.dwiyatcita@rwth-aachen.de",
+            "url": "http://tiny.cc/dwiyatci"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/dwiyatci/jquery-stickynotif/blob/0.0.1/MIT-LICENSE.md"
+        }
+    ],
+    "bugs": "https://github.com/dwiyatci/jquery-stickynotif/issues",
+    "homepage": "https://github.com/dwiyatci/jquery-stickynotif",
+    "docs": "https://github.com/dwiyatci/jquery-stickynotif#readme",
+    "demo": "http://tiny.cc/jquery-stickynotif-demo",
+    "download": "https://github.com/dwiyatci/jquery-stickynotif/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
