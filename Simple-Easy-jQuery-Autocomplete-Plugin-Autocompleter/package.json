@@ -1,0 +1,34 @@
+{
+  "name": "Autocompleter",
+  "id": "autocompleter",
+  "codename": "jquery.autocompleter",
+  "version": "0.0.7",
+  "description": "Simple, easy, customisable and with cache support.",
+  "keywords": [
+    "autocomplete",
+    "cache",
+    "ajax",
+    "input",
+    "javascript",
+    "jquery",
+    "codler"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtemFitiskin/jquery-autocompleter"
+  },
+  "homepage": "http://github.com/ArtemFitiskin/jquery-autocompleter",
+  "demo": "http://artemfitiskin.github.io/jquery-autocompleter/",
+  "license": "MIT",
+  "author": {
+    "name": "Artem Fitiskin",
+    "email": "me@artemfitiskin.ru",
+    "url": "http://codler.ru"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-jquerymanifest": "latest"
+  }
+}
